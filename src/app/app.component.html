@@ -1,47 +1,38 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Company (disabled)" disabled value="Google">
-  </mat-form-field>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><mat-form-field class="example-full-width">
-      <input matInput placeholder="First name">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <input matInput placeholder="Long Last Name That Will Be Truncated">
-    </mat-form-field></td>
-  </tr></table>
-
-  <p>
-    <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Address 2"></textarea>
-    </mat-form-field>
-  </p>
-
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td><mat-form-field class="example-full-width">
-      <input matInput placeholder="City">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <input matInput placeholder="State">
-    </mat-form-field></td>
-    <td><mat-form-field class="example-full-width">
-      <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-    </mat-form-field></td>
-  </tr></table>
-</form>
-
+<mat-toolbar color="primary">
+  <span>Bug Tracker</span>
+</mat-toolbar>
+<mat-sidenav-container class="example-sidenav-fab-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <mat-icon>add</mat-icon>
+    </button>
+    <div class="example-scrolling-content">
+      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus,
+      fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam
+      nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna
+      aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
+      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at,
+      ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu
+      enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis,
+      tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
+      Taciti dui, sapien consectetuer.
+    </div>
+  </mat-sidenav>
+  <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <div class="example-scrolling-content">
+    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce
+    vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id,
+    neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna.
+    Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat
+    cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui
+    sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu
+    erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh
+    ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien
+    consectetuer.
+  </div>
+</mat-sidenav-container>
 
 <!-- Copyright 2017 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
