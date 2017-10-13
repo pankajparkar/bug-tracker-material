@@ -1,6 +1,9 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+//third party plugins
+import 'hammerjs';
+
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
