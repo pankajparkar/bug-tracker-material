@@ -1,25 +1,20 @@
-.example-sidenav-fab-container {
+.sidenav-container {
     /* width: 500px; */
     height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
   
-  .example-sidenav-fab-container mat-sidenav {
+  .sidenav-container mat-sidenav {
     max-width: 200px;
   }
   
-  .example-sidenav-fab-container .mat-sidenav-content,
-  .example-sidenav-fab-container mat-sidenav {
+  .sidenav-container .mat-sidenav-content,
+  .sidenav-container mat-sidenav {
     display: flex;
     overflow: visible;
   }
-  
-  .example-scrolling-content {
-    overflow: auto;
-    height: 100%;
-  }
-  
-  .example-fab.mat-mini-fab {
+
+  .sidenav-container .mat-mini-fab {
     position: absolute;
     right: 20px;
     bottom: 10px;
