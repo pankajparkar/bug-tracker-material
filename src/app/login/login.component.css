@@ -1,6 +1,10 @@
-.wrapper {    
-	margin-top: 80px;
-	margin-bottom: 20px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .form-signin > * {
+  width: 100%;
 }
 
 .form-signin {
@@ -9,7 +13,7 @@
   margin: 0 auto;
   background-color: #eee;
   border: 3px dotted rgba(0,0,0,0.1);  
-  }
+}
 
 .form-signin-heading {
   text-align:center;
