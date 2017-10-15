@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //module imports
@@ -18,6 +19,9 @@ import { LoginComponent } from './login/login.component';
 import { LocalStorageService } from './services/local-storage.service';
 import { AuthService } from './services/auth.service';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FilterByComponent } from './filter-by/filter-by.component';
+import { FilterByService } from './filter-by/filter-by.service';
+import { CommonService } from './services/common.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DashboardComponent,
     WelcomeComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    FilterByComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     FormsModule, 
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    BugTrackerMaterialModule
+    BugTrackerMaterialModule,
+    HttpClientModule
   ],
-  providers: [AuthService, LocalStorageService],
+  providers: [AuthService, LocalStorageService, FilterByService, CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
