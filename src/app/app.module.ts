@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 //service imports
 import { LocalStorageService } from './services/local-storage.service';
 import { AuthService } from './services/auth.service';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthService } from './services/auth.service';
     NavbarComponent,
     DashboardComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
