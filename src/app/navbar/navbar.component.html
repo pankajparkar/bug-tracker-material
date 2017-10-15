@@ -1,3 +1,16 @@
 <mat-toolbar color="primary">
   <span>Bug Tracker</span>
+  &nbsp;
+  <button [color]="rla1.isActive ? 'accent': ''" mat-button routerLinkActive 
+    [routerLink]="'welcome'" #rla1="routerLinkActive">
+      Welcome
+  </button>
+  <button [color]="rla2.isActive ? 'accent': ''" mat-button routerLinkActive 
+    [routerLink]="'dashboard'" #rla2="routerLinkActive">
+      Dashboard
+  </button>
+  <button [color]="rla3.isActive ? 'accent': ''" mat-button routerLinkActive 
+    [routerLink]="'profile'" #rla3="routerLinkActive">
+      Profile
+  </button>
 </mat-toolbar>
