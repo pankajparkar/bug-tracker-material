@@ -1,6 +1,6 @@
 <bt-navbar></bt-navbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="side" opened="true">
+  <mat-sidenav #sidenav mode="side" [opened]="openSidebar()">
     <bt-sidebar></bt-sidebar>
   </mat-sidenav>
   <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
