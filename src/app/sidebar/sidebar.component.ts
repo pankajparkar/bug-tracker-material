@@ -2,7 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
     selector: 'bt-sidebar',
-    templateUrl: '/app/sidebar/sidebar.component.html'
+    templateUrl: 'sidebar.component.html'
 })
 
 export class SidebarComponent implements OnInit {
