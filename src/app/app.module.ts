@@ -22,6 +22,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FilterByComponent } from './filter-by/filter-by.component';
 import { FilterByService } from './filter-by/filter-by.service';
 import { CommonService } from './services/common.service';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CommonService } from './services/common.service';
     WelcomeComponent,
     LoginComponent,
     SidebarComponent,
-    FilterByComponent
+    FilterByComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
