@@ -23,6 +23,12 @@ import { FilterByComponent } from './filter-by/filter-by.component';
 import { FilterByService } from './filter-by/filter-by.service';
 import { CommonService } from './services/common.service';
 import { ProfileComponent } from './profile/profile.component';
+import { TicketService } from './ticket/ticket.service';
+import { TicketListComponent } from './ticket/ticket-list/ticket-list.component';
+import { TicketKanbanComponent } from './ticket/ticket-kanban/ticket-kanban.component';
+import { UtilityService } from './services/utility.service';
+import { TicketItemComponent } from './ticket/ticket-item/ticket-item.component';
+import { GroupByPipe } from './pipes/group-by.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,11 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     SidebarComponent,
     FilterByComponent,
-    ProfileComponent
+    ProfileComponent,
+    TicketListComponent,
+    TicketKanbanComponent,
+    TicketItemComponent,
+    GroupByPipe,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,7 @@ import { ProfileComponent } from './profile/profile.component';
     BugTrackerMaterialModule,
     HttpClientModule
   ],
-  providers: [AuthService, LocalStorageService, FilterByService, CommonService],
+  providers: [AuthService, LocalStorageService, FilterByService, CommonService, TicketService, UtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
