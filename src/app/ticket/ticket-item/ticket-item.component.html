@@ -1,4 +1,4 @@
-<span class="glyphicon" [ngClass]="{
+<!-- <span class="glyphicon" [ngClass]="{
   'glyphicon-tags': ticket.Type == 1,
   'glyphicon-flash': ticket.Type == 2,
   'glyphicon-arrow-down': ticket.Type == 3
@@ -12,4 +12,13 @@
     Priority
   </small>
   <span class="label label-default">{{ticket.Priority}}</span>
-</span>
+</span> -->
+<mat-icon *ngIf="ticket.Type == 1" mat-list-icon>priority_high</mat-icon>
+<mat-icon *ngIf="ticket.Type == 2" mat-list-icon>low_priority</mat-icon>
+<mat-icon *ngIf="ticket.Type == 3" mat-list-icon>arrow_downward</mat-icon>
+<p mat-line> 
+  <a [routerLink]="['../ticket-details', ticket.Id]">
+    {{ticket.TicketNumber}}
+  </a>
+  {{ticket.Title}}
+</p>
