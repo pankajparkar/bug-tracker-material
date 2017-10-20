@@ -1,38 +1,38 @@
 <mat-grid-list cols="3" rowHeight="3:1">
   <mat-grid-tile>
-    <h4 class="text-center">
-      Todo
-    </h4>
-    <div class="alert alert-info" *ngIf="!todoItems?.length">
-      No <b>Todo</b> Item(s)
-    </div>
     <mat-list gutterSize="10px">
+      <mat-list-item>
+        Todo
+      </mat-list-item>
+      <mat-list-item *ngIf="!todoItems?.length">
+        No <b>Todo</b> Item(s)
+      </mat-list-item>
       <mat-list-item *ngFor="let ticket of todoItems">
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
     </mat-list>
   </mat-grid-tile>
   <mat-grid-tile>
-    <h4 class="text-center">
-      In Progress
-    </h4>
-    <div class="alert alert-info" *ngIf="!inProgressItems?.length">
-      No <b>In Progress</b> Item(s)
-    </div>
     <mat-list>
+      <mat-list-item>
+        In Progress
+      </mat-list-item>
+      <mat-list-item *ngIf="!inProgressItems?.length">
+        No <b>In Progress</b> Item(s)
+      </mat-list-item>
       <mat-list-item *ngFor="let ticket of inProgressItems">
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
     </mat-list>
   </mat-grid-tile>
   <mat-grid-tile>
-    <h4 class="text-center">
-      Completed
-    </h4>
-    <div class="alert alert-info" *ngIf="!completedItems?.length">
-      No <b>Completed</b> Item(s)
-    </div>
     <mat-list>
+      <mat-list-item>
+        Completed
+      </mat-list-item>
+      <mat-list-item *ngIf="!completedItems?.length">
+        No <b>Completed</b> Item(s)
+      </mat-list-item>
       <mat-list-item *ngFor="let ticket of completedItems">
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
