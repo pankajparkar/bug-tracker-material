@@ -1,95 +1,41 @@
-<div class="row">
-  <div class="col-sm-4 kanban-view border-right">
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="text-center">
-          Todo
-        </h4>
-      </div>
-      <div class="col-sm-12">
-        <div class="alert alert-info" *ngIf="!todoItems?.length">
-          No <b>Todo</b> Item(s)
-        </div>
-      </div>
-      <div class="col-sm-12" *ngFor="let ticket of todoItems">
-        <div class="well well-sm">
-          <table width="100%">
-            <small>
-              <tr>
-                <td width="40px">
-                  <a [routerLink]="['../ticket-details', ticket.Id]">{{ticket.TicketNumber}}</a>
-                  <span class="label label-default">{{ticket.AssignedToName}}</span>
-                </td>
-                <td>
-                  {{ticket.Title}}
-                </td>
-              </tr>
-            </small>
-          </table>
-        </div>
-      </div>
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile>
+    <h4 class="text-center">
+      Todo
+    </h4>
+    <div class="alert alert-info" *ngIf="!todoItems?.length">
+      No <b>Todo</b> Item(s)
     </div>
-  </div>
-  <div class="col-sm-4 kanban-view border-right">
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="text-center">
-          In Progress
-        </h4>
-      </div>
-      <div class="col-sm-12">
-        <div class="alert alert-info" *ngIf="!inProgressItems?.length">
-          No <b>In Progress</b> Item(s)
-        </div>
-      </div>
-      <div class="col-sm-12" *ngFor="let ticket of inProgressItems">
-        <div class="well well-sm">
-          <table width="100%">
-            <small>
-              <tr>
-                <td width="40px">
-                  <a [routerLink]="['../ticket-details', ticket.Id]">{{ticket.TicketNumber}}</a>
-                  <span class="label label-default">{{ticket.AssignedToName}}</span>
-                </td>
-                <td>
-                  {{ticket.Title}}
-                </td>
-              </tr>
-            </small>
-          </table>
-        </div>
-      </div>
+    <mat-list gutterSize="10px">
+      <mat-list-item *ngFor="let ticket of todoItems">
+        <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h4 class="text-center">
+      In Progress
+    </h4>
+    <div class="alert alert-info" *ngIf="!inProgressItems?.length">
+      No <b>In Progress</b> Item(s)
     </div>
-  </div>
-  <div class="col-sm-4 kanban-view">
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="text-center">
-          Completed
-        </h4>
-      </div>
-      <div class="col-sm-12">
-        <div class="alert alert-info" *ngIf="!completedItems?.length">
-          No <b>Completed</b> Item(s)
-        </div>
-      </div>
-      <div class="col-sm-12" *ngFor="let ticket of completedItems">
-        <div class="well well-sm">
-          <table width="100%">
-            <small>
-              <tr>
-                <td width="40px">
-                  <a [routerLink]="['../ticket-details', ticket.Id]">{{ticket.TicketNumber}}</a>
-                  <span class="label label-default">{{ticket.AssignedToName}}</span>
-                </td>
-                <td>
-                  {{ticket.Title}}
-                </td>
-              </tr>
-            </small>
-          </table>
-        </div>
-      </div>
+    <mat-list>
+      <mat-list-item *ngFor="let ticket of inProgressItems">
+        <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h4 class="text-center">
+      Completed
+    </h4>
+    <div class="alert alert-info" *ngIf="!completedItems?.length">
+      No <b>Completed</b> Item(s)
     </div>
-  </div>
-</div>
+    <mat-list>
+      <mat-list-item *ngFor="let ticket of completedItems">
+        <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+</mat-grid-list>
