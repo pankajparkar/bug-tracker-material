@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private router: Router){ }
 
   openSidebar(){
-    return this.url === '/dashboard';
+    return this.url && this.url.indexOf('/dashboard') !== -1;
   }
 
   ngOnInit(){
