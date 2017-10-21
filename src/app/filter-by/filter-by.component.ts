@@ -10,7 +10,8 @@ import { CommonService } from './../services/common.service';
 
 @Component({
     selector: 'bt-filter-by',
-    templateUrl: 'filter-by.component.html'
+    templateUrl: 'filter-by.component.html',
+    styleUrls: ['filter-by.component.css']
 })
 
 export class FilterByComponent implements OnInit {
