@@ -9,7 +9,8 @@ import { FilterByService } from './../../filter-by/filter-by.service';
 
 @Component({
     selector: 'bt-ticket-kanban',
-    templateUrl: 'ticket-kanban.component.html'
+    templateUrl: 'ticket-kanban.component.html',
+    styleUrls: ['ticket-kanban.component.css']
 })
 
 export class TicketKanbanComponent implements OnInit {

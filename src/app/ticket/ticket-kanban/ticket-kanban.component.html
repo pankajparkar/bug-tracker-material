@@ -1,5 +1,5 @@
-<mat-grid-list cols="3" rowHeight="3:1">
-  <mat-grid-tile>
+<div class="kaban-list">
+  <div class="kanban">
     <mat-list gutterSize="10px">
       <mat-list-item>
         Todo
@@ -11,8 +11,8 @@
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
     </mat-list>
-  </mat-grid-tile>
-  <mat-grid-tile>
+  </div>
+  <div class="kanban">
     <mat-list>
       <mat-list-item>
         In Progress
@@ -24,8 +24,8 @@
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
     </mat-list>
-  </mat-grid-tile>
-  <mat-grid-tile>
+  </div>
+  <div class="kanban">
     <mat-list>
       <mat-list-item>
         Completed
@@ -37,5 +37,5 @@
         <bt-ticket-item [ticket]="ticket"></bt-ticket-item>
       </mat-list-item>
     </mat-list>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
