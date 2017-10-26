@@ -1,5 +1,8 @@
 <mat-button-toggle-group #group="matButtonToggleGroup">
-  <mat-button-toggle value="left" *ngFor="let item of names">
-    {{item.Name}}
+  <mat-button-toggle value="left" 
+    (click)="setFilterName(item)"
+    [ngClass]="{'mat-button-toggle-checked': (filterName$ | async)?.Name == item.Name}"
+    *ngFor="let item of names">
+      {{item.Name}}
   </mat-button-toggle>
 </mat-button-toggle-group>
